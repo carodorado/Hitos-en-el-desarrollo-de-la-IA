@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mi Línea de Tiempo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TimelineJS CSS -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+  <!-- TimelineJS JS -->
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #timeline-embed {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div id="timeline-embed"></div>
+
+<script>
+  var additionalOptions = {
+    initial_zoom: 2,
+    timenav_position: "bottom",
+    language: "es"
+  }
+
+  var timeline = new TL.Timeline('timeline-embed',
+    {
+      "title": {
+        "text": {
+          "headline": "Mi Historia",
+          "text": "Una línea de tiempo personalizada ✨"
+        }
+      },
+      "events": [
+        {
+          "start_date": {
+            "year": "2020"
+          },
+          "text": {
+            "headline": "Un comienzo",
+            "text": "Aquí empezó todo..."
+          }
+        },
+        {
+          "start_date": {
+            "year": "2022",
+            "month": "5"
+          },
+          "text": {
+            "headline": "Un cambio importante",
+            "text": "Algo significativo ocurrió en mi vida."
+          }
+        },
+        {
+          "start_date": {
+            "year": "2024"
+          },
+          "text": {
+            "headline": "Hoy",
+            "text": "Estoy construyendo mi historia 🚀"
+          }
+        }
+      ]
+    },
+    additionalOptions
+  );
+</script>
+
+</body>
+</html>
